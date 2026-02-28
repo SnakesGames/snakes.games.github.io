@@ -86,6 +86,94 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease;
             animation: floatCard 6s ease-in-out infinite;
         }
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup:target {
+    display: flex;
+}
+
+.popup-content {
+    background: rgba(0,0,0,0.95);
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,198,255,0.7);
+    animation: popupFade 0.25s ease;
+}
+
+.popup-content a.button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00c6ff, #0058ff);
+    color: white;
+    text-decoration: none;
+}
+
+.popup-close {
+    display: block;
+    margin-top: 15px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+.dev-games a {
+    display: block;
+    margin-top: 6px;
+    color: #00c6ff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dev-games a:hover {
+    text-shadow: 0 0 10px #00c6ff;
+    transform: translateX(5px);
+}
+
+@keyframes popupFade {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+        .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.project-card {
+    text-decoration: none;
+    background: #111;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    transition: all 0.25s ease;
+    border: 1px solid #222;
+}
+
+.project-card:hover {
+    background: #1a1a1a;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 10px #00f0ff,
+                0 0 20px #00f0ff33,
+                0 0 30px #00f0ff22;
+    border-color: #00f0ff;
+}
+
+.project-card:active {
+    transform: scale(0.95);
+}
 
         .card:hover {
             transform: translateY(-8px) scale(1.02);
@@ -243,6 +331,12 @@ To delete your PlayFab account, contact: sigmaboyguyso12@gmail.com
             <h2>Snake</h2>
             <p><strong>CEO / DEV / SCRIPTER</strong></p>
             <p>Leads the Projects, handles core systems, develops gameplay mechanics and backend features</p>
+            
+            <div class="dev-games">
+        <strong>Games:</strong>
+        <a href="#game-swingverse">Swing Verse</a>
+        <a href="#game-chimps">Stupid Chimps Boredom</a>
+    </div>
         </div>
 
         <div class="card">
@@ -250,6 +344,11 @@ To delete your PlayFab account, contact: sigmaboyguyso12@gmail.com
             <h2>TheV1sitor</h2>
             <p><strong>DEV / COO / IDEAS</strong></p>
             <p>Helps manage the team and contributes creative ideas and development support</p>
+            
+            <div class="dev-games">
+        <strong>Games:</strong>
+        <a href="#game-swingverse">Swing Verse</a>
+    </div>
         </div>
 
         <div class="card">
@@ -257,6 +356,12 @@ To delete your PlayFab account, contact: sigmaboyguyso12@gmail.com
             <h2>OLIVER</h2>
             <p><strong>DEV / MODELS MAKER</strong></p>
             <p>Creates 3D models with blender/unity and helps with development</p>
+            
+            <div class="dev-games">
+        <strong>Games:</strong>
+        <a href="#game-swingverse">Swing Verse</a>
+        <a href="#game-chimps">Stupid Chimps Boredom</a>
+    </div>
         </div>
 
         <div class="card">
@@ -264,6 +369,11 @@ To delete your PlayFab account, contact: sigmaboyguyso12@gmail.com
             <h2>STARCINNAMON232</h2>
             <p><strong>DEV / MODELS / MARKETING</strong></p>
             <p>Works on models with blender/unity and helps promote the game through marketing</p>
+            
+            <div class="dev-games">
+        <strong>Games:</strong>
+        <a href="#game-chimps">Stupid Chimps Boredom</a>
+    </div>
         </div>
 
         <div class="card">
@@ -271,6 +381,12 @@ To delete your PlayFab account, contact: sigmaboyguyso12@gmail.com
             <h2>Echo</h2>
             <p><strong>COO / IDEAS</strong></p>
             <p>Supports the team and gives ideas to improve gameplay and features</p>
+            
+            <div class="dev-games">
+        <strong>Games:</strong>
+        <a href="#game-swingverse">Swing Verse</a>
+        <a href="#game-chimps">Stupid Chimps Boredom</a>
+    </div>
         </div>
 
     </div>
@@ -310,6 +426,28 @@ To delete your PlayFab account, contact: sigmaboyguyso12@gmail.com
         </div>
     </div>
 </section>
+<!-- Swing Verse Popup -->
+<div id="game-swingverse" class="popup">
+    <div class="popup-content">
+        <h2>Swing Verse</h2>
+        <p><strong>Players:</strong> 150</p>
+
+        <a href="https://www.meta.com/en-gb/experiences/sky-wars/25496084320051125" class="button" target="_blank">Download</a>
+        <a href="#" class="popup-close">Close</a>
+    </div>
+</div>
+
+<!-- Chimps Popup -->
+<div id="game-chimps" class="popup">
+    <div class="popup-content">
+        <h2>Stupid Chimps Boredom</h2>
+        <p><strong>Players:</strong> 3.5k+</p>
+
+        <a href="https://www.meta.com/en-gb/experiences/stupid-chimps-boredom/25837411325861445/" class="button" target="_blank">Download</a>
+        <a href="#" class="popup-close">Close</a>
+    </div>
+</div>
+    
 
 <script src="https://download.playfab.com/PlayFabClientApi.js"></script>
 <script>
